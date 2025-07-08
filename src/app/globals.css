@@ -6,7 +6,7 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
+  /* --color-background: var(--background); */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -23,4 +23,167 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.testimonials-section {
+  background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, rgba(17, 17, 17, 0.68) 52.84%, rgba(17, 17, 17, 0.92) 87.48%, #111 100%) !important;
+}
+
+/* Existing scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+/* Straightforward smooth ladder animations */
+@keyframes ladderUp {
+  0% {
+    transform: translateY(120px);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translateY(60px);
+    opacity: 0.8;
+  }
+
+  40% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  60% {
+    transform: translateY(-60px);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(-120px);
+    opacity: 0;
+  }
+}
+
+@keyframes ladderDown {
+  0% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translateY(-40px);
+    opacity: 0.8;
+  }
+
+  40% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  60% {
+    transform: translateY(40px);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+}
+
+/* Mobile animation - simple top to bottom flow */
+@keyframes mobileFlow {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  25% {
+    transform: translateY(-50px);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  75% {
+    transform: translateY(50px);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+.animate-ladder-up {
+  animation: ladderUp 4s linear infinite;
+}
+
+.animate-ladder-down {
+  animation: ladderDown 4s linear infinite;
+}
+
+/* Mobile-specific animation */
+@media (max-width: 1023px) {
+
+  .animate-ladder-up,
+  .animate-ladder-down {
+    animation: mobileFlow 4s linear infinite;
+  }
+}
+
+/* Alternative subtle animations */
+@keyframes cardBreathe {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.01);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes cardSway {
+  0% {
+    transform: translateX(0px) rotate(0deg);
+  }
+
+  33% {
+    transform: translateX(-3px) rotate(-0.5deg);
+  }
+
+  66% {
+    transform: translateX(3px) rotate(0.5deg);
+  }
+
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+.animate-card-breathe {
+  animation: cardBreathe 6s ease-in-out infinite;
+}
+
+.animate-card-sway {
+  animation: cardSway 8s ease-in-out infinite;
 }

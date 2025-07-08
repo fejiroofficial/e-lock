@@ -1,11 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-
 import menu from "../../asset/svg/menu.svg";
 import Image from "next/image";
 import Button from "../button";
-
 
 const NavBar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -21,20 +19,21 @@ const NavBar = () => {
         onClick={toggleMenu}
         aria-label="Toggle Menu"
       >
-        <Image src={menu} alt="menu-icon" width={30} height={30}/>
+        <Image src={menu} alt="menu-icon" width={30} height={30} />
       </button>
 
       {isMenuOpen && (
-        <div>
-          <div className="flex flex-col justify-between items-center relative top-0 rounded-lg shadow-lg w-full h-1/2 p-6">
+        <div className="absolute top-14 left-0 w-screen bg-[#242424] z-40 shadow-lg">
+          <div className="flex flex-col items-center gap-6 p-6">
             <button
-              className="absolute top-4 right-4 text-gray-600 hover:text-gray-900"
+              className="absolute top-4 right-4 text-gray-300 hover:text-white"
               onClick={toggleMenu}
               aria-label="Close Menu"
             >
               <AiOutlineClose size={24} />
             </button>
-            <ul className="space-y-6 text-center ">
+
+            <ul className="space-y-6 text-center pt-6 w-full">
               <li>
                 <a
                   href="#features"
@@ -47,7 +46,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="#howItWorks"
-                  className="block text-white normal hover:text-[#40C2FF]"
+                  className="text-white normal hover:text-[#40C2FF]"
                   onClick={toggleMenu}
                 >
                   How it Works
@@ -56,7 +55,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="#pricing"
-                  className="block text-white normal hover:text-[#40C2FF]"
+                  className="text-white normal hover:text-[#40C2FF]"
                   onClick={toggleMenu}
                 >
                   Pricing
@@ -65,20 +64,23 @@ const NavBar = () => {
               <li>
                 <a
                   href="#faq"
-                  className="block text-white normal hover:text-[#40C2FF]"
+                  className="text-white normal hover:text-[#40C2FF]"
                   onClick={toggleMenu}
                 >
                   FAQ
                 </a>
               </li>
               <div className="block lg:hidden">
-              <Button className='bg-[#EFEFEF] text-black normal p-3 w-full rounded-[8px]'>Start Free Trial </Button>
-            </div>
+                <Button className="bg-[#EFEFEF] text-black normal p-3 w-full rounded-[8px]">
+                  Start Free Trial
+                </Button>
+              </div>
             </ul>
-        
           </div>
         </div>
       )}
+
+      {/* Desktop Menu */}
       <ul className="hidden lg:flex gap-8">
         <li>
           <a href="#features" className="text-white normal hover:text-[#40C2FF] font-medium">

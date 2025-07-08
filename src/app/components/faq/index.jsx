@@ -29,11 +29,11 @@ const Index = ({ faqs }) => {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="border border-[#F3F3F3] rounded-lg transition-all duration-300"
+            className="transition-all duration-300"
           >
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full flex items-center justify-between gap-2 sm:gap-4 px-6 py-4 text-left focus:outline-none"
+              className="w-full border border-[#F3F3F3] cursor-pointer rounded-lg flex items-center justify-between gap-2 sm:gap-4 px-6 py-4 text-left focus:outline-none"
             >
               <span className="text-base lg:text-[20px] font-medium">
                 {faq.question}
@@ -57,7 +57,7 @@ const Index = ({ faqs }) => {
                     : "0px",
               }}
             >
-              <div className="pb-4 pt-2 text-gray-300">{faq.answer}</div>
+              <div className="pb-4 pt-2 text-[#aaa]">{faq.answer}</div>
             </div>
           </div>
         ))}
