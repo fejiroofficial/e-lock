@@ -5,16 +5,16 @@ import Button from "../../components/button";
 
 const Header = () => {
   return (
-    <div className="sticky top-0 z-50">
-      <header className="lg:py-6 rounded-md lg:px-2 lg:mx-20">
-        <div className="flex justify-between items-center px-2 md:px-6 py-4 lg:px-2 lg:py-2 max-w-[964px] mx-auto  bg-[#242424] rounded-lg">
+    <div className="relative pb-[6rem]">
+      <header className="px-4 lg:py-6 lg:px-0 lg:mx-20 lg:fixed lg:top-6 lg:left-1/2 -translate-x-1/2 z-50 w-full">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 px-4 md:px-6 py-4 bg-[#242424] rounded-lg mx-auto max-w-[964px]">
           <Link href="/" className="flex items-center gap-2">
-            <p className="text-[32px] font-bold text-[#EFEFEF] pl-3">
+            <p className="text-2xl md:text-[32px] font-bold text-[#EFEFEF] pl-1 md:pl-3">
               eLOCK
             </p>
           </Link>
 
-          <div>
+          <div className="w-full md:w-auto">
             <NavBar />
           </div>
 

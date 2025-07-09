@@ -7,6 +7,7 @@ import Main from "./section/main";
 export default function Home() {
   return (
     <div className="w-full">
+           
       <section
         style={{
           backgroundImage: `url(${background.src})`,
@@ -16,7 +17,7 @@ export default function Home() {
         }}
         className="w-full"
       >
-        <Header />
+   <Header />
         <Hero />
       </section>
 

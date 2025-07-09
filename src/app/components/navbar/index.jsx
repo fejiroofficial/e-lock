@@ -10,10 +10,12 @@ const NavBar = () => {
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
+    document.body.style.overflow = isMenuOpen ? "auto" : "hidden"; // prevent scroll on open
   };
 
   return (
     <nav className="relative">
+      {/* Mobile Menu Button */}
       <button
         className="text-white lg:hidden"
         onClick={toggleMenu}
@@ -22,83 +24,86 @@ const NavBar = () => {
         <Image src={menu} alt="menu-icon" width={30} height={30} />
       </button>
 
+      {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
-        <div className="absolute top-14 left-0 w-screen bg-[#242424] z-40 shadow-lg">
-          <div className="flex flex-col items-center gap-6 p-6">
-            <button
-              className="absolute top-4 right-4 text-gray-300 hover:text-white"
-              onClick={toggleMenu}
-              aria-label="Close Menu"
-            >
-              <AiOutlineClose size={24} />
-            </button>
+        <div className="fixed inset-0 bg-[#242424] z-50 flex flex-col items-center justify-center px-6">
+          {/* Close Button */}
+          <button
+            className="absolute top-6 right-6 text-gray-300 hover:text-white"
+            onClick={toggleMenu}
+            aria-label="Close Menu"
+          >
+            <AiOutlineClose size={28} />
+          </button>
 
-            <ul className="space-y-6 text-center pt-6 w-full">
-              <li>
-                <a
-                  href="#features"
-                  className="text-white normal hover:text-[#40C2FF]"
-                  onClick={toggleMenu}
-                >
-                  Features
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#howItWorks"
-                  className="text-white normal hover:text-[#40C2FF]"
-                  onClick={toggleMenu}
-                >
-                  How it Works
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#pricing"
-                  className="text-white normal hover:text-[#40C2FF]"
-                  onClick={toggleMenu}
-                >
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#faq"
-                  className="text-white normal hover:text-[#40C2FF]"
-                  onClick={toggleMenu}
-                >
-                  FAQ
-                </a>
-              </li>
-              <div className="block lg:hidden">
-                <Button className="bg-[#EFEFEF] text-black normal p-3 w-full rounded-[8px]">
-                  Start Free Trial
-                </Button>
-              </div>
-            </ul>
-          </div>
+          {/* Menu Items */}
+          <ul className="space-y-6 text-center mt-10 w-full">
+            <li>
+              <a
+                href="#features"
+                className="text-white text-lg hover:text-[#40C2FF]"
+                onClick={toggleMenu}
+              >
+                Features
+              </a>
+            </li>
+            <li>
+              <a
+                href="#howItWorks"
+                className="text-white text-lg hover:text-[#40C2FF]"
+                onClick={toggleMenu}
+              >
+                How it Works
+              </a>
+            </li>
+            <li>
+              <a
+                href="#pricing"
+                className="text-white text-lg hover:text-[#40C2FF]"
+                onClick={toggleMenu}
+              >
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a
+                href="#faq"
+                className="text-white text-lg hover:text-[#40C2FF]"
+                onClick={toggleMenu}
+              >
+                FAQ
+              </a>
+            </li>
+
+            {/* Mobile CTA Button */}
+            <div className="w-full pt-4">
+              <Button className="bg-[#EFEFEF] text-black text-base py-3 w-full rounded-[8px]">
+                Start Free Trial
+              </Button>
+            </div>
+          </ul>
         </div>
       )}
 
       {/* Desktop Menu */}
       <ul className="hidden lg:flex gap-8">
         <li>
-          <a href="#features" className="text-white normal hover:text-[#40C2FF] font-medium">
+          <a href="#features" className="text-white hover:text-[#40C2FF] font-medium">
             Features
           </a>
         </li>
         <li>
-          <a href="#howItWorks" className="text-white normal hover:text-[#40C2FF] font-medium">
+          <a href="#howItWorks" className="text-white hover:text-[#40C2FF] font-medium">
             How it Works
           </a>
         </li>
         <li>
-          <a href="#pricing" className="text-white normal hover:text-[#40C2FF] font-medium">
+          <a href="#pricing" className="text-white hover:text-[#40C2FF] font-medium">
             Pricing
           </a>
         </li>
         <li>
-          <a href="#faq" className="text-white normal hover:text-[#40C2FF] font-medium">
+          <a href="#faq" className="text-white hover:text-[#40C2FF] font-medium">
             FAQ
           </a>
         </li>
