@@ -25,15 +25,16 @@ const Index = ({ faqs }) => {
       <h2 className="text-[32px] md:text-[40px] lg:text-[56px] font-semibold text-center mb-6 leading-tight">
         Everything You Need to <br /> Know
       </h2>
+
       <div className="max-w-4xl mx-auto space-y-4 w-full">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="transition-all duration-300"
+            className="border border-[#F3F3F3] rounded-lg transition-all duration-300 overflow-hidden"
           >
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full border border-[#F3F3F3] cursor-pointer rounded-lg flex items-center justify-between gap-2 sm:gap-4 px-6 py-4 text-left focus:outline-none"
+              className="w-full cursor-pointer flex items-center justify-between gap-2 sm:gap-4 px-6 py-4 text-left focus:outline-none"
             >
               <span className="text-base lg:text-[20px] font-medium">
                 {faq.question}
@@ -49,7 +50,7 @@ const Index = ({ faqs }) => {
 
             <div
               ref={(el) => (contentRefs.current[index] = el)}
-              className={`px-6 overflow-hidden transition-all duration-500 ease-in-out`}
+              className={`px-6 transition-all duration-500 ease-in-out`}
               style={{
                 maxHeight:
                   openIndex === index
