@@ -6,7 +6,7 @@ import Main from "./section/main";
 
 export default function Home() {
   return (
-    <div className="w-full">
+    <div className="bg-[#111]">
            
       <section
         style={{
@@ -15,7 +15,6 @@ export default function Home() {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
-        className="w-full"
       >
    <Header />
         <Hero />

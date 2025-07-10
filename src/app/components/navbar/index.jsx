@@ -24,10 +24,9 @@ const NavBar = () => {
         <Image src={menu} alt="menu-icon" width={30} height={30} />
       </button>
 
-      {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-[#242424] z-50 flex flex-col items-center justify-center px-6">
-          {/* Close Button */}
+    
           <button
             className="absolute top-6 right-6 text-gray-300 hover:text-white"
             onClick={toggleMenu}
@@ -36,12 +35,11 @@ const NavBar = () => {
             <AiOutlineClose size={28} />
           </button>
 
-          {/* Menu Items */}
           <ul className="space-y-6 text-center mt-10 w-full">
             <li>
               <a
                 href="#features"
-                className="text-white text-lg hover:text-[#40C2FF]"
+                className="text-white text-lg hover:text-[grey]"
                 onClick={toggleMenu}
               >
                 Features
@@ -50,7 +48,7 @@ const NavBar = () => {
             <li>
               <a
                 href="#howItWorks"
-                className="text-white text-lg hover:text-[#40C2FF]"
+                className="text-white text-lg hover:text-[grey]"
                 onClick={toggleMenu}
               >
                 How it Works
@@ -59,7 +57,7 @@ const NavBar = () => {
             <li>
               <a
                 href="#pricing"
-                className="text-white text-lg hover:text-[#40C2FF]"
+                className="text-white text-lg hover:text-[grey]"
                 onClick={toggleMenu}
               >
                 Pricing
@@ -68,7 +66,7 @@ const NavBar = () => {
             <li>
               <a
                 href="#faq"
-                className="text-white text-lg hover:text-[#40C2FF]"
+                className="text-white text-lg hover:text-[grey]"
                 onClick={toggleMenu}
               >
                 FAQ
@@ -88,22 +86,22 @@ const NavBar = () => {
       {/* Desktop Menu */}
       <ul className="hidden lg:flex gap-8">
         <li>
-          <a href="#features" className="text-white hover:text-[#40C2FF] font-medium">
+          <a href="#features" className="text-white hover:text-[grey] font-medium">
             Features
           </a>
         </li>
         <li>
-          <a href="#howItWorks" className="text-white hover:text-[#40C2FF] font-medium">
+          <a href="#howItWorks" className="text-white hover:text-[grey] font-medium">
             How it Works
           </a>
         </li>
         <li>
-          <a href="#pricing" className="text-white hover:text-[#40C2FF] font-medium">
+          <a href="#pricing" className="text-white hover:text-[grey] font-medium">
             Pricing
           </a>
         </li>
         <li>
-          <a href="#faq" className="text-white hover:text-[#40C2FF] font-medium">
+          <a href="#faq" className="text-white hover:text-[grey] font-medium">
             FAQ
           </a>
         </li>
