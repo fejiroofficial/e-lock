@@ -32,7 +32,7 @@ export default function Hero() {
     <section className="container mx-auto flex flex-col justify-center items-center h-screen px-4 md:px-12 pt-16 mt-16 md:mt-2">
       <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
         <div className="flex-1">
-          <h2 className="text-[32px] md:text-[40px] lg:text-[56px] font-semibold mb-4 leading-tight">
+          <h2 className="text-[32px] md:text-[40px] lg:text-[56px] font-semibold mb-4 leading-tight text-[#F3F3F3]">
             We Simplify Password Management, Sharing, and Oversight
           </h2>
           <p className="text-base md:text-[18px] lg:text-[20px] font-medium text-[#AAA]">
