@@ -10,7 +10,7 @@ const NavBar = () => {
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
-    document.body.style.overflow = isMenuOpen ? "auto" : "hidden"; // prevent scroll on open
+    document.body.style.overflow = isMenuOpen ? "auto" : "hidden";
   };
 
   return (

@@ -36,7 +36,7 @@ export default function Main() {
         <p className="text-[12px] text-base bg-[#0A0B0D] text-[#F3F3F3] border border-[#444] rounded-md p-2">
           Comparison
         </p>
-        <h2 className="text-[32px] md:text-[40px] lg:text-[56px] font-semibold text-center mb-4">
+        <h2 className="text-[32px] md:text-[40px] lg:text-[56px] font-semibold text-center mb-4 text-[#F3F3F3]">
           See What makes Us <br />
           Stand Out
         </h2>
@@ -239,7 +239,7 @@ export default function Main() {
         <p className="text-[12px] text-base bg-[#0A0B0D] text-[#F3F3F3] border border-[#444] rounded-md p-2">
           Benefits
         </p>
-        <h2 className="text-[32px] md:text-[40px] lg:text-[56px] font-semibold text-center mb-4">
+        <h2 className="text-[32px] md:text-[40px] lg:text-[56px] font-semibold text-center mb-4 text-[#F3F3F3]">
           Password Sharing <br /> made Safer
         </h2>
 

@@ -3,6 +3,7 @@ import Footer from "./section/footer";
 import background from "../app/asset/svg/mask.svg";
 import Hero from "./section/hero";
 import Main from "./section/main";
+import Problem from "./section/problem";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
    <Header />
         <Hero />
       </section>
-
+        <Problem />
       <Main />
       <Footer />
     </div>
