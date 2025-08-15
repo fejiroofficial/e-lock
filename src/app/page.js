@@ -8,7 +8,6 @@ import Problem from "./section/problem";
 export default function Home() {
   return (
     <div className="bg-[#111]">
-           
       <section
         style={{
           backgroundImage: `url(${background.src})`,
@@ -17,10 +16,10 @@ export default function Home() {
           backgroundPosition: "center",
         }}
       >
-   <Header />
+        <Header />
         <Hero />
       </section>
-        <Problem />
+      <Problem />
       <Main />
       <Footer />
     </div>

@@ -262,7 +262,7 @@ export default function Main() {
               <p className="text-[#F3F3F3] text-[32px] md:text-[38px] lg:text-[48px] font-semibold ">
                 Built-in authenticator for extra protection
               </p>
-              <p className="font-medium text-base md:text-[18px] lg:text-[20px] text-[#aaa]">
+              <p className="text-base md:text-[18px] lg:text-[20px] text-[#aaa]">
                 No need for third-party apps, our platform includes a native 2FA
                 code generator so your team can stay secure without switching
                 tools.
@@ -314,7 +314,7 @@ export default function Main() {
               <p className="text-[#F3F3F3] text-[32px] md:text-[38px] lg:text-[48px] font-semibold ">
                 Monitor and catch threats before they escalate
               </p>
-              <p className="font-medium text-base md:text-[18px] lg:text-[20px] text-[#aaa]">
+              <p className="text-base md:text-[18px] lg:text-[20px] text-[#aaa]">
                 Stay ahead of potential breaches with real-time threat
                 monitoring and smart alerts. Know exactly when, where, and how
                 unusual activity is happening. tools.
@@ -507,7 +507,7 @@ export default function Main() {
           <h3 className="text-[#F3F3F3] text-[32px] md:text-[56px] font-semibold">
             Try it now. Stay Secure <br className="hidden md:block" /> Forever
           </h3>
-          <p className="text-[#aaa] text-base lg:text-[20px] font-medium">
+          <p className="text-[#aaa] text-base lg:text-[20px]">
             No more leaks, lost logins, or risky sharing. Just simple, secure{" "}
             <br className="hidden md:block" />
             access for your entire team.
