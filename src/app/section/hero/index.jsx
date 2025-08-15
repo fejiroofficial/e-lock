@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
-import lock from "../../asset/body/lock.png";
-import star from "../../asset/header/Star .png";
+import lock from "../../asset/body/Lock.png";
+import star from "../../asset/header/Star.png";
 import piggy from "../../asset/header/piggy.svg";
 import flutter from "../../asset/header/flutter.svg";
 import axa from "../../asset/header/axa.svg";
@@ -36,7 +36,8 @@ export default function Hero() {
             Secure Your Password From Unauthorized Access
           </h1>
           <p className="text-base md:text-[18px] lg:text-[20px] text-[#F3F3F3] mb-6">
-            Easily manage passwords and sign‑ins to every application from any device
+            Easily manage passwords and sign‑ins to every application from any
+            device
           </p>
           <div className="flex flex-col lg:flex-row gap-4 mt-6 w-full max-w-[400px]">
             <button
