@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Line from "../../asset/body/Line 1.png";
+import Line from "../../asset/body/Line1.png";
 import tick from "../../asset/body/tick.png";
 
 const plans = {
